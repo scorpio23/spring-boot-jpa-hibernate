@@ -47,8 +47,18 @@ public class Application implements CommandLineRunner{
 		
 		System.out.println("\n\n ***************************** ");
 		
-		VpostHicardSendinfo vpostHicardSendinfo = vpostRepo.findByloginnameAndDatetimestart("balajiyachachamaneni", date);
+		VpostHicardSendinfo vpostHicardSendinfo = vpostRepo.findByloginnameAndDatetimestart("uatestacct01", date);
 		System.out.println("Result findByloginnameAndDatetimestart vpostHicardSendinfo ===========> " + vpostHicardSendinfo);
+		
+		System.out.println("***************************** ");
+		
+		
+		
+		System.out.println("\n\n ***************************** ");
+		
+		String input = "17303";
+		VpostHicardSendinfo vpostFindChar = vpostRepo.findByJday(input);
+		System.out.println("Result findByJday vpostHicardSendinfo ===========> " + vpostHicardSendinfo);
 		
 		System.out.println("***************************** ");
 		

@@ -17,4 +17,6 @@ public interface VpostHicardSendinfoRepository extends JpaRepository<VpostHicard
 	
 	@Query("SELECT v FROM VpostHicardSendinfo v WHERE v.loginname = :loginName AND trunc(datetimestart) = trunc(:date)")
 	VpostHicardSendinfo findByloginnameAndDatetimestart(@Param("loginName")String loginName, @Param("date")Date date);
+	
+	VpostHicardSendinfo findByJday (String input);
 }
